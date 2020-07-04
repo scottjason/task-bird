@@ -12,7 +12,7 @@ function App() {
         <Navbar Link={Link} />
         <Route exact path='/' component={Tasks} />
         <Route path='/new-task' component={NewTask} />
-        <Route path='/task/:id' component={UpdateTask} />
+        <Route path='/update-task/:id' component={UpdateTask} />
     </Router>
   );
 }

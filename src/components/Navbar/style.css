@@ -15,8 +15,15 @@
   color: white;
   text-decoration: none;
 }
+
 .navbar-item:nth-child(1) {
   margin-left: 1rem;
+}
+.navbar-item.left {
+  color: #3498db;
+  font-size: 1.3rem;
+  font-weight: 600;
+  letter-spacing: .1rem;
 }
 
 .navbar-right {

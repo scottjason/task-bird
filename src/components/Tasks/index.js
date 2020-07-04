@@ -45,27 +45,27 @@ const Tasks = () => {
   if (error) return `Error! ${error.message}`;
 
   return (
-        <div className='notes-container'>
+        <div className='tasks-container'>
           {data.allTasks.map((task) => (
               <div 
                 key={task._id}
-                className='note-wrap'>
-                <header className='note-header'>
-                  <p className='note-title'>{task.title}</p>
+                className='task-wrap'>
+                <header className='task-header'>
+                  <p className='task-title'>{task.title}</p>
                 </header>
                 <div className='content-wrap'>
                     {task.content}
                 </div>
-                <footer className='note-footer'>
-                  <Link to={`note/${task._id}`} className='note-footer-item'>
-                    Edit
+                <footer className='task-footer'>
+                  <Link to={`update-task/${task._id}`} className='task-footer-item'>
+                    Update
                   </Link>
                   <button
                     onClick={(e) => {
                       e.preventDefault();
                       deleteTask({ variables: { _id: task._id } });
                     }}
-                    className='note-footer-item'
+                    className='task-footer-item'
                   >
                     Delete
                   </button>

@@ -14,7 +14,7 @@ export const resolvers = {
       return await Task.create(input);
     },
     async updateTask(root, { _id, input }) {
-      return await Task.findOneAndUpdate({ _id }, input, { new: true });
+      return await Task.findOneAndUpdate({ _id }, input, { new: true, useFindAndModify: false });
     },
     async deleteTask(root, { _id }) {
       return await Task.findOneAndRemove({ _id });

@@ -16,8 +16,9 @@ const errorLink = onError(({ graphQLErrors }) => {
     graphQLErrors.map(({ message }) => notify.show(message, 'error'));
 });
 
-const httpUri = process.env.HTTP_URI || 'http://localhost:4300/graphql';
-const httpLink = createHttpLink({ uri: httpUri });
+const isProduction = process.env.NODE_ENV === 'production';
+const uri = isProduction ? 'https://taskbird.herokuapp.com/graphql' : 'http://localhost:4300/graphql';
+const httpLink = createHttpLink({ uri: uri });
 const link = ApolloLink.from([errorLink, httpLink]);
 
 const client = new ApolloClient({

@@ -5,8 +5,8 @@ const Navbar = ({ Link }) => {
   return (
     <nav className='navbar' role='navigation' aria-label='navigation'>
       <div className='logo-wrap'>
-        <Link to='/' className='navbar-item'>
-          Task Bird
+        <Link to='/' className='navbar-item left'>
+          taskbird
         </Link>
       </div>
 

@@ -43,8 +43,8 @@ const UpdateTask = ({ match, history }) => {
   const task = data;
 
   return (
-    <div className='edit-container'>
-      <div className='edit-form-wrap'>
+    <div className='update-container'>
+      <div className='update-form-wrap'>
         <form
           onSubmit={(e) => {
             e && e.preventDefault();
@@ -60,9 +60,9 @@ const UpdateTask = ({ match, history }) => {
           }}
         >
           <div className='field'>
-            <label className='label'>Edit Title</label>
+            <label className='label'>update title</label>
               <input
-                className='input'
+                className='update-input'
                 type='text'
                 name='title'
                 placeholder='Note Title'
@@ -73,7 +73,7 @@ const UpdateTask = ({ match, history }) => {
           </div>
 
           <div className='field'>
-            <label className='label'>Edit Content</label>
+            <label className='label'>update content</label>
               <textarea
                 className='textarea'
                 rows='10'
@@ -86,7 +86,7 @@ const UpdateTask = ({ match, history }) => {
           </div>
 
           <div className='field'>
-            <button className='save-btn'>Save</button>
+            <button className='save-btn'>save</button>
           </div>
         </form>
       </div>
