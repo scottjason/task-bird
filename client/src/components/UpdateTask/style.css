@@ -1,0 +1,60 @@
+.edit-container {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.edit-form-wrap {
+  width: 70%;
+  margin: 0 auto;
+  background-color: #f7f1e3;
+}
+
+.input,
+.textarea {
+  color: rgba(0, 0, 0, .8);
+  font-size: 1.1rem;
+  width: 100%;
+  min-width: 280px;
+  max-width: 1440px;
+  padding: 0 .5rem 0 .5rem;
+  resize: none;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+.textarea {
+  padding: .8rem 0 0 .8rem;
+  border-top: 1px solid rgba(0, 0, 0, .2);
+}
+.input {
+  height: 40px;
+}
+.field:nth-child(1) {
+  margin-top: 1.5rem;
+}
+
+.field:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .5);
+}
+
+.save-btn {
+  width: 150px;
+  height: 50px;
+  outline: none;
+  color: #34ace0;
+  border: 1px solid rgba(0, 0, 0, .1);
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+  float: right;
+  font-weight: 600;
+  background-color: white;
+}

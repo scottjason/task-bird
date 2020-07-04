@@ -1,0 +1,12 @@
+html {
+  font-size: 14px;
+  background-color: #f7f1e3;
+}
+
+body {
+  margin: 0 auto;
+  background-color: #f7f1e3;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
