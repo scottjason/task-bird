@@ -1,14 +1,20 @@
+import 'babel-polyfill';
 import cors from 'cors';
 import express from 'express';
-import graphlHTTP from 'express-graphql';
 import mongoose from 'mongoose';
+import graphlHTTP from 'express-graphql';
 import schema from './schema';
+
 const path = require('path');
 require('dotenv').config();
 
 const isProduction = process.env.NODE_ENV === 'production';
 const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster-a-zrd5v.azure.mongodb.net/${process.env.DB_HOST}?retryWrites=true&w=majority`;
 const staticDir = isProduction ? 'build' : 'public';
+
+if (!isProduction) {
+  require("@babel/register");
+}
 
 mongoose.Promise = global.Promise;
 mongoose.connect(mongoUri, {
