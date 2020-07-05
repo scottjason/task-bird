@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { useMutation } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
+import './style.css';
 
 const NEW_TASK = gql`
   mutation createTask($title: String!, $content: String!) {
@@ -42,7 +43,6 @@ const NewTask = withRouter(({ history }) => {
 
   return (
     <div className='new-task-container'>
-      <h1 className='page-title'>New Task</h1>
       <div className='new-task-wrap'>
         <form
           onSubmit={(e) => {
@@ -60,7 +60,7 @@ const NewTask = withRouter(({ history }) => {
           <div className='field'>
             <label className='label'>Task Title</label>
               <input
-                className='input'
+                className='new-task-input'
                 name='title'
                 type='text'
                 placeholder='Task Title'
@@ -82,7 +82,7 @@ const NewTask = withRouter(({ history }) => {
           </div>
 
           <div className='field'>
-              <button className='button is-link'>submit</button>
+              <button className='submit-btn'>submit</button>
           </div>
         </form>
       </div>
