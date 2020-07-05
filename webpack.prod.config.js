@@ -5,7 +5,9 @@ const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
 
 const plugins = [
   new CleanWebpackPlugin(),
-  new HtmlWebpackPlugin(),
+  new HtmlWebpackPlugin({
+    title: 'taskbird',
+  }),
   new HtmlWebpackRootPlugin(),
 ];
 

@@ -27,11 +27,7 @@ const app = express();
 const port = process.env.PORT || 4300;
 
 app.use(cors());
-app.use(
-  express.static(path.join(__dirname, './dist'), {
-    maxAge: 30 * 60 * 60 * 24 * 1000,
-  })
-);
+app.use(express.static(path.join(__dirname, './dist')));
 
 app.use(
   '/graphql',

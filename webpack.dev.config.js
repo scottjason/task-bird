@@ -8,6 +8,7 @@ const plugins = [
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html',
+      title: 'taskbird',
     }),
     new webpack.DefinePlugin({
       'process.env': {
