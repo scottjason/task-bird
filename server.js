@@ -38,7 +38,6 @@ app.use(
 );
 
 app.get('*', (req, res, next) => {
-  console.log('hit route')
   res.sendFile('index.html', {
     root: __dirname + '/dist'
   });

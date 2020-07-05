@@ -13,7 +13,6 @@
   background-color: #f7f1e3;
 }
 
-
 .update-input,
 .textarea {
   color: rgba(0, 0, 0, .8);
@@ -41,17 +40,18 @@
   background: rgba(0, 0, 0, 1);
 }
 
-
 .textarea {
   padding: .8rem 0 0 .8rem;
   border: 1px solid rgba(0, 0, 0, .2);
   border-bottom: none;
 }
+
 .update-input {
   padding-left: .8rem;
   height: 40px;
   border: 1px solid rgba(0, 0, 0, .2);
 }
+
 .field:nth-child(1) {
   margin-top: 1.5rem;
 }
