@@ -1,3 +1,4 @@
+require = require('esm')(module);
 import 'babel-polyfill';
 import cors from 'cors';
 import express from 'express';
@@ -9,11 +10,11 @@ const path = require('path');
 require('dotenv').config();
 
 const isProduction = process.env.NODE_ENV === 'production';
+const staticDir = isProduction ? 'dist' : 'public';
 const mongoUri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster-a-zrd5v.azure.mongodb.net/${process.env.DB_HOST}?retryWrites=true&w=majority`;
-const staticDir = isProduction ? 'build' : 'public';
 
 if (!isProduction) {
-  require("@babel/register");
+  require('@babel/register');
 }
 
 mongoose.Promise = global.Promise;
@@ -26,7 +27,11 @@ const app = express();
 const port = process.env.PORT || 4300;
 
 app.use(cors());
-app.use('/static', express.static(path.join(__dirname, staticDir)));
+app.use(
+  express.static(path.join(__dirname, './dist'), {
+    maxAge: 30 * 60 * 60 * 24 * 1000,
+  })
+);
 
 app.use(
   '/graphql',
@@ -35,6 +40,12 @@ app.use(
     graphiql: true
   })
 );
+
+app.get('*', (req, res, next) => {
+  res.sendFile('index.html', {
+    root: __dirname + '/dist'
+  });
+});
 
 app.listen(port, () => {
   console.log(`Server is listening on port ${port}`);
