@@ -15,7 +15,6 @@ module.exports = {
   mode: 'production',
   entry: path.resolve(__dirname, 'src/index.js'),
   output: {
-    filename: '[name].[hash].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -42,4 +41,11 @@ module.exports = {
     ],
   },
   plugins: plugins,
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      minSize: 35000,
+      maxSize: 50000,
+    },
+  },
 };
