@@ -60,7 +60,7 @@ const UpdateTask = ({ match, history }) => {
           }}
         >
           <div className='field'>
-            <label className='label'>update title</label>
+            <label className='label'>Update Title</label>
               <input
                 className='update-input'
                 type='text'
@@ -73,7 +73,7 @@ const UpdateTask = ({ match, history }) => {
           </div>
 
           <div className='field'>
-            <label className='label'>update content</label>
+            <label className='label'>Update Content</label>
               <textarea
                 className='textarea'
                 rows='10'

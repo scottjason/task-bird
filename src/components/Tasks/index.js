@@ -54,7 +54,7 @@ const Tasks = () => {
                   <p className='task-title'>{task.title}</p>
                 </header>
                 <div className='content-wrap'>
-                    {task.content}
+                    <p>{task.content}</p>
                 </div>
                 <footer className='task-footer'>
                   <Link to={`update-task/${task._id}`} className='task-footer-item'>

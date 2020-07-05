@@ -6,10 +6,13 @@
 }
 
 .update-form-wrap {
-  width: 70%;
+  min-width: 280px;
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
   background-color: #f7f1e3;
 }
+
 
 .update-input,
 .textarea {
@@ -17,20 +20,37 @@
   font-size: 1.1rem;
   width: 100%;
   min-width: 280px;
-  max-width: 1440px;
-  padding: 0 .5rem 0 .5rem;
+  max-width: 800px;
+  padding: 0 .5rem 0 0;
   resize: none;
   box-sizing: border-box;
   outline: none;
   border: none;
 }
 
+.textarea::-webkit-scrollbar {
+  width: 12px;
+}
+
+.textarea::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, .4);
+  background-color: #D3CFC6;
+}
+
+.textarea::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 1);
+}
+
+
 .textarea {
   padding: .8rem 0 0 .8rem;
-  border-top: 1px solid rgba(0, 0, 0, .2);
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-bottom: none;
 }
 .update-input {
+  padding-left: .8rem;
   height: 40px;
+  border: 1px solid rgba(0, 0, 0, .2);
 }
 .field:nth-child(1) {
   margin-top: 1.5rem;
@@ -43,19 +63,22 @@
 .label {
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgba(0, 0, 0, .5);
+  color: rgba(0, 0, 0, .7);
+  text-transform: capitalize;
+  cursor: text;
 }
 
 .save-btn {
-  width: 150px;
+  width: 100%;
   height: 50px;
   outline: none;
-  color: #34ace0;
   color: white;
   border: 1px solid rgba(0, 0, 0, .1);
+  border-top: none;
   text-transform: uppercase;
   letter-spacing: .5rem;
   float: right;
   font-weight: 600;
+  cursor: pointer;
   background-color: black;
 }
