@@ -41,9 +41,13 @@ module.exports = {
     ],
   },
   plugins: plugins,
+  performance: {
+    maxEntrypointSize: 512000,
+    maxAssetSize: 500000,
+  },
   optimization: {
     splitChunks: {
-      chunks: 'all',
+      chunks: 'initial',
       minSize: 35000,
       maxSize: 50000,
     },
