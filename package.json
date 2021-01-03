@@ -5,8 +5,8 @@
   "main": "server.js",
   "repository": "https://github.com/scottjason/task-bird",
   "engines": {
-    "node": "12.18.x",
-    "npm": "6.14.x"
+    "node": "14.x",
+    "npm": "6.x"
   },
   "scripts": {
     "start": "node -r esm app.js ",
@@ -34,6 +34,7 @@
     "graphql-tag": "^2.10.3",
     "graphql-tools": "^4.0.5",
     "mongoose": "^5.7.1",
+    "mquery": ">=3.2.3",
     "path": "^0.12.7"
   },
   "devDependencies": {
@@ -68,7 +69,6 @@
     "react-notify-toast": "^0.5.1",
     "react-router-dom": "^5.2.0",
     "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
